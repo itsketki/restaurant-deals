@@ -12,9 +12,9 @@ This service provides REST APIs to manage restaurant deals based on time.
 https://eccdn.com.au/misc/challengedata.json
 
 ## Tech Stack
-Java 25
-Spring Boot 4.x
-Maven
+- Java 25
+- Spring Boot 4.x
+- Maven
 
 ## Running the application locally
 1. Import the project to your favorite IDE.
