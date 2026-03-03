@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class ApiClientTest {
 
@@ -16,7 +14,7 @@ class ApiClientTest {
     void testFetchRestaurants() {
         apiClient.getRestaurants()
                 .doOnNext(r -> System.out.println("Restaurants: " + r.getRestaurants().size()))
-                .block(); // safe in test
+                .block();
     }
 
 }

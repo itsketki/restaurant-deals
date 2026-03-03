@@ -1,6 +1,7 @@
 package com.eatclub.restaurant.deal.controller;
 
 import com.eatclub.restaurant.deal.response.ActiveDealResponse;
+import com.eatclub.restaurant.deal.response.PeakTimeResponse;
 import com.eatclub.restaurant.deal.service.DealService;
 import com.eatclub.restaurant.deal.util.TimeUtil;
 import org.slf4j.Logger;
@@ -31,6 +32,11 @@ public class DealController {
 
         return dealService.getActiveDeals(requestTime);
 
+    }
+
+    @GetMapping("/peak-time")
+    public Mono<PeakTimeResponse> getPeakTime() {
+        return dealService.calculatePeakTime();
     }
 
 

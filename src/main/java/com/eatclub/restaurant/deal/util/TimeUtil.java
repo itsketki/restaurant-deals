@@ -20,7 +20,6 @@ public class TimeUtil {
     private TimeUtil() { }
 
     public static LocalTime parseTime(String time) {
-        logger.info("Parsing time: {}", time);
         if (time == null || time.isBlank()) {
             throw new IllegalArgumentException("Time string cannot be null or empty");
         }
