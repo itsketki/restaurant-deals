@@ -37,6 +37,10 @@ A deal’s open and close time are resolved in the following priority:
 - open / close fields
 - start / end fields
 - Restaurant default opening hours
-If none of the above are provided, the deal is assumed as Inactive.
+- If none of the above are provided, the deal is assumed as Inactive.
+
+
+- Peak window deals API -
+- In case, multiple windows with same maximum deals, first window slot is returned.
 
 
