@@ -35,13 +35,22 @@ class TimeUtilTest {
 
     @Test
     void testTimeParsing_BlankInput() {
-        String time = "  ";
-        assertNull(TimeUtil.parseTime(time));
+        IllegalArgumentException exception =
+                assertThrows(IllegalArgumentException.class,
+                        () -> TimeUtil.parseTime(" "));
+
+        assertEquals("Time string cannot be null or empty",
+                exception.getMessage());
     }
 
     @Test
     void testTimeParsing_NullInput() {
-        assertNull(TimeUtil.parseTime(null));
+        IllegalArgumentException exception =
+                assertThrows(IllegalArgumentException.class,
+                        () -> TimeUtil.parseTime(null));
+
+        assertEquals("Time string cannot be null or empty",
+                exception.getMessage());
     }
 
 }
